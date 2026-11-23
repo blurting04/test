@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BLUTING | 로또 번호 추천</title>
-
+<title>BLUTING | 세상의 모든 궁금증</title>
 <style>
 * {
     margin: 0;
@@ -14,206 +13,160 @@
 }
 
 body {
-    background: #090909;
-    color: white;
     font-family: Arial, "Malgun Gothic", sans-serif;
-    min-height: 100vh;
+    background: #090909;
+    color: #fff;
 }
 
 header {
-    padding: 25px 8%;
-    border-bottom: 1px solid #292929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 8%;
+    border-bottom: 1px solid #252525;
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 900;
     letter-spacing: 4px;
 }
 
-.container {
-    max-width: 750px;
-    margin: 80px auto;
-    padding: 20px;
-    text-align: center;
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 12%;
 }
 
 .tag {
-    color: #ff3939;
-    font-size: 13px;
+    color: #999;
     letter-spacing: 3px;
-    margin-bottom: 20px;
+    font-size: 12px;
+    margin-bottom: 25px;
 }
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    line-height: 1.3;
+.hero h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1.2;
+    font-weight: 900;
+    margin-bottom: 25px;
 }
 
-.description {
-    color: #888;
-    line-height: 1.7;
-    margin-bottom: 45px;
-}
-
-#numbers {
-    margin: 35px 0;
-}
-
-.number-set {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 18px 0;
-}
-
-.set-label {
+.hero h1 span {
     color: #ff3939;
-    font-size: 13px;
-    width: 55px;
-    text-align: left;
-    font-weight: bold;
 }
 
-.ball {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #111;
-    font-size: 19px;
-    font-weight: bold;
+.hero p {
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.ball.yellow {
-    background: #f5c542;
-}
-
-.ball.blue {
-    background: #4b9be8;
+.button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 35px;
+    padding: 15px 28px;
+    border: 1px solid #555;
     color: white;
+    text-decoration: none;
+    transition: .3s;
 }
 
-.ball.red {
-    background: #ed5555;
-    color: white;
+.button:hover {
+    background: white;
+    color: black;
 }
 
-.ball.gray {
-    background: #aaa;
+section {
+    padding: 80px 12%;
 }
 
-.ball.green {
-    background: #65b875;
+.section-title {
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-button {
-    background: #ff3939;
-    color: white;
-    border: none;
-    padding: 17px 45px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .2s;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #d92020;
-    transform: translateY(-2px);
-}
-
-button:disabled {
-    opacity: .6;
-    cursor: wait;
-}
-
-.info {
-    color: #666;
-    font-size: 13px;
-    margin-top: 30px;
-    line-height: 1.7;
-}
-
-.history {
-    margin-top: 65px;
-    text-align: left;
-    border-top: 1px solid #292929;
-    padding-top: 30px;
-}
-
-.history h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.history-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 0;
-    border-bottom: 1px solid #222;
-    flex-wrap: wrap;
-}
-
-.history-item span:first-child {
+.section-desc {
     color: #888;
-    font-size: 12px;
-    width: 65px;
+    margin-bottom: 40px;
 }
 
-.small-ball {
-    width: 29px;
-    height: 29px;
-    border-radius: 50%;
-    color: #111;
-    font-size: 12px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #151515;
+    padding: 35px 25px;
+    border: 1px solid #292929;
+    min-height: 180px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #999;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.about {
+    background: #111;
+    text-align: center;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 2;
+    max-width: 650px;
+    margin: 20px auto 0;
 }
 
 footer {
     text-align: center;
-    color: #555;
-    padding: 30px;
+    padding: 35px;
+    border-top: 1px solid #252525;
+    color: #666;
     font-size: 12px;
-    border-top: 1px solid #222;
+    letter-spacing: 2px;
 }
 
-@media(max-width: 600px) {
-    .container {
-        margin: 55px auto;
+@media(max-width: 700px) {
+    header {
+        padding: 22px 6%;
     }
-
-    h1 {
-        font-size: 32px;
+    nav a {
+        margin-left: 10px;
+        font-size: 12px;
     }
-
-    .ball {
-        width: 39px;
-        height: 39px;
-        font-size: 15px;
+    .hero {
+        padding: 70px 7%;
+        min-height: 480px;
     }
-
-    .number-set {
-        gap: 7px;
+    section {
+        padding: 65px 7%;
     }
-
-    .set-label {
-        width: 45px;
-        font-size: 11px;
-    }
-
-    button {
-        padding: 15px 30px;
+    .cards {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -223,209 +176,61 @@ footer {
 
 <header>
     <div class="logo">BLUTING.</div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#contents">CONTENTS</a>
+        <a href="#about">ABOUT</a>
+    </nav>
 </header>
 
-<main class="container">
-
-    <div class="tag">LOTTO NUMBER GENERATOR</div>
-
-    <h1>
-        오늘의 행운을<br>
-        만들어 보세요.
-    </h1>
-
-    <p class="description">
-        버튼을 누르면 1부터 45까지의 숫자 중<br>
-        중복되지 않는 6개의 번호를 5세트 추천합니다.
-    </p>
-
-    <!-- 추천 번호 출력 영역 -->
-    <div id="numbers">
-
-        <div class="number-set">
-            <div class="set-label">SET 1</div>
-            <div class="ball">?</div>
-            <div class="ball">?</div>
-            <div class="ball">?</div>
-            <div class="ball">?</div>
-            <div class="ball">?</div>
-            <div class="ball">?</div>
-        </div>
-
+<main>
+    <div class="hero" id="home">
+        <div class="tag">DISCOVER · EXPLORE · KNOW</div>
+        <h1>
+            세상의 궁금증을<br>
+            <span>새롭게 바라보다.</span>
+        </h1>
+        <p>
+            몰랐던 이야기부터 흥미로운 이슈까지.<br>
+            블러팅은 세상의 다양한 정보를 쉽고 재미있게 전달합니다.
+        </p>
+        <a href="#contents" class="button">블러팅 알아보기 →</a>
     </div>
 
-    <button id="generateBtn" onclick="generateNumbers()">
-        로또 번호 5세트 추천받기
-    </button>
+    <section id="contents">
+        <h2 class="section-title">WHAT WE DO.</h2>
+        <p class="section-desc">블러팅이 전하는 세 가지 이야기</p>
 
-    <p class="info">
-        ※ 추천 번호는 무작위 생성 결과이며 당첨을 보장하지 않습니다.<br>
-        ※ 각 세트 내부에서는 번호가 중복되지 않습니다.
-    </p>
-
-    <!-- 최근 추천 내역 -->
-    <div class="history">
-
-        <h2>최근 추천 번호</h2>
-
-        <div id="historyList">
-            <p style="color:#666; font-size:13px;">
-                아직 추천한 번호가 없습니다.
-            </p>
+        <div class="cards">
+            <div class="card">
+                <h3>01. TREND</h3>
+                <p>지금 세상에서 주목받는 최신 이슈와 트렌드를 전달합니다.</p>
+            </div>
+            <div class="card">
+                <h3>02. KNOWLEDGE</h3>
+                <p>일상에서 지나쳤던 흥미로운 사실과 새로운 지식을 소개합니다.</p>
+            </div>
+            <div class="card">
+                <h3>03. STORY</h3>
+                <p>세상 곳곳에서 일어나는 특별하고 재미있는 이야기를 다룹니다.</p>
+            </div>
         </div>
+    </section>
 
-    </div>
-
+    <section class="about" id="about">
+        <h2 class="section-title">ABOUT BLUTING.</h2>
+        <p>
+            우리는 매일 수많은 정보를 마주합니다.<br>
+            하지만 그중에는 아직 발견하지 못한 흥미로운 이야기가 많습니다.<br><br>
+            BLUTING은 그 이야기들을 찾아내고,<br>
+            누구나 쉽고 재미있게 이해할 수 있도록 전달하는 콘텐츠 브랜드입니다.
+        </p>
+    </section>
 </main>
 
 <footer>
     BLUTING. © 2026 ALL RIGHTS RESERVED.
 </footer>
-
-<script>
-
-let historyCount = 0;
-
-// 번호 생성 함수
-function generateNumbers() {
-
-    const button = document.getElementById("generateBtn");
-
-    button.disabled = true;
-    button.textContent = "번호 생성 중...";
-
-    setTimeout(() => {
-
-        const numberBox = document.getElementById("numbers");
-
-        numberBox.innerHTML = "";
-
-        const generatedSets = [];
-
-        // 총 5세트 생성
-        for (let set = 0; set < 5; set++) {
-
-            const pool = Array.from(
-                { length: 45 },
-                (_, index) => index + 1
-            );
-
-            // Fisher-Yates 무작위 셔플
-            for (let i = pool.length - 1; i > 0; i--) {
-
-                const j = Math.floor(Math.random() * (i + 1));
-
-                [pool[i], pool[j]] = [pool[j], pool[i]];
-
-            }
-
-            // 숫자 6개 선택 및 오름차순 정렬
-            const selected = pool.slice(0, 6)
-                .sort((a, b) => a - b);
-
-            generatedSets.push(selected);
-
-            // 화면 출력
-            const row = document.createElement("div");
-
-            row.className = "number-set";
-
-            const label = document.createElement("span");
-
-            label.className = "set-label";
-
-            label.textContent = "SET " + (set + 1);
-
-            row.appendChild(label);
-
-            selected.forEach(number => {
-
-                const ball = document.createElement("div");
-
-                ball.className = "ball " + getColor(number);
-
-                ball.textContent = number;
-
-                row.appendChild(ball);
-
-            });
-
-            numberBox.appendChild(row);
-
-        }
-
-        // 5세트 추천 내역 저장
-        generatedSets.forEach(numbers => {
-
-            addHistory(numbers);
-
-        });
-
-        button.disabled = false;
-
-        button.textContent = "5세트 다시 추천받기";
-
-    }, 400);
-
-}
-
-
-// 로또 번호 색상 설정
-function getColor(number) {
-
-    if (number <= 10) return "yellow";
-
-    if (number <= 20) return "blue";
-
-    if (number <= 30) return "red";
-
-    if (number <= 40) return "gray";
-
-    return "green";
-
-}
-
-
-// 추천 내역 추가
-function addHistory(numbers) {
-
-    historyCount++;
-
-    const historyList = document.getElementById("historyList");
-
-    if (historyCount === 1) {
-
-        historyList.innerHTML = "";
-
-    }
-
-    const item = document.createElement("div");
-
-    item.className = "history-item";
-
-    const label = document.createElement("span");
-
-    label.textContent = "추천 " + historyCount;
-
-    item.appendChild(label);
-
-    numbers.forEach(number => {
-
-        const ball = document.createElement("div");
-
-        ball.className = "small-ball " + getColor(number);
-
-        ball.textContent = number;
-
-        item.appendChild(ball);
-
-    });
-
-    historyList.prepend(item);
-
-}
-
-</script>
 
 </body>
 </html>
